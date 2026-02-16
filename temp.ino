@@ -41,11 +41,11 @@ void setup() {
 
 void loop() {
   temp=dht.getTemperature();
-  if(temp<24 && mheater==0){
+  if(temp<20 && mheater==0){
     digitalWrite(heater, HIGH);
     Blynk.virtualWrite(V3, 1);
   }  
-  if(temp>=24 && mheater==0){
+  if(temp>=20 && mheater==0){
     digitalWrite(heater, LOW);
     Blynk.virtualWrite(V3, 0);
   }
