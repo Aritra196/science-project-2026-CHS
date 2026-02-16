@@ -1,12 +1,12 @@
-###Smart Elder Assistance System
+# Smart Elder Assistance System
 
-#Also known as *Project Smart Warranty Expired Club*
+#### Also known as *Project Smart Warranty Expired Club*
 
-##**Members:-**
+## **Members:-**
 - Arghamegh Das
 - Aritra Mondal 
 
-##**Features:-**
+## **Features:-**
 
 1. Temperature of room [x]
 2. Bathroom presence time and overtime alert [ ]
