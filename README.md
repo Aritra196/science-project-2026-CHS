@@ -1,6 +1,6 @@
 # Smart Elder Assistance System
 
-######## Also known as *Project Smart Warranty Expired Club*
+###### Also known as *Project Smart Warranty Expired Club*
 
 ## **Members:-**
 - Arghamegh Das
