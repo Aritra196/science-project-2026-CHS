@@ -16,7 +16,7 @@
 6. Smart Walking Stick and alert [ ]
 
 ## **Components used:-**
-1. NodeMCU(ESP8266) x 2
+1. NodeMCU(ESP8266) x 3
 2. DHT22 Digital Temperature & Humidity Sensor x 1
 3. IR Sensor x 8
 4. SW-420 Vibration Sensor x 1
