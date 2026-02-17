@@ -16,12 +16,13 @@
 6. Smart Walking Stick and alert [ ]
 
 ## **Components used:-**
-1. ESP32 x 3
-2. DHT22 Digital Temperature & Humidity Sensor x 1
-3. IR Sensor x 8
-4. SW-420 Vibration Sensor x 1
-5. Tower Pro SG90 Servo Motor x 3
-6. LED
-7. Resistor
-8. Jumper cables
-9. Breadboard
+1. ESP32 x 1 ₹378
+2. NodeMCU(ESP8266) x 1 ₹198
+3. DHT22 Digital Temperature & Humidity Sensor x 1 ₹104
+4. IR Sensor x 8 ₹30x8 = ₹240
+5. SW-420 Vibration Sensor x 1 ₹41
+6. Tower Pro SG90 Servo Motor x 3 ₹73x3=₹219
+7. LED
+8. Resistor
+9. Jumper cables
+10. Breadboard
