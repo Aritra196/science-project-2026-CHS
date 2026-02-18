@@ -38,4 +38,4 @@
 
 ## **Connection**:-
 
-![](esp32_pinout.png)
+![](images/esp32_pinout.png)
