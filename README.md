@@ -35,3 +35,7 @@
 8. Resistor
 9. Jumper cables
 10. Breadboard
+
+## **Connection**:-
+
+!image[](esp332_pinout.png)
