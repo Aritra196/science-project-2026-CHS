@@ -37,5 +37,5 @@ void loop() {
     }
   }
   Blynk.run();
-  delay(500);
+  delay(50);
 }
