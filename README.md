@@ -12,9 +12,12 @@
    
    #### *Wokwi Link:* [Temperature of room in Wokwi](https://wokwi.com/projects/456115310006639617) 
    
-3. Bathroom presence time and overtime alert 
-4. Absence time from home 
-5. Proper and timely medicine taking, suggestion and data logging ⚠️
+3. Bathroom presence time and overtime alert ⚠️
+
+   #### *Wokwi Link:* [Bathroom presence time](https://wokwi.com/projects/456265230626128897) 
+   
+5. Absence time from home 
+6. Proper and timely medicine taking, suggestion and data logging ⚠️
    
    #### *Wokwi Link:* [Suggesting and ensuring proper and timely medicine taking in Wokwi](https://wokwi.com/projects/456170387027473409) 
    
