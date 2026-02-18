@@ -16,7 +16,7 @@
 4. Absence time from home 
 5. Proper and timely medicine taking, suggestion and data logging ⚠️
    
-   #### *Wokwi Link:* [Suggesting, ensuring proper and timely medicine taking in Wokwi](https://wokwi.com/projects/456170387027473409) 
+   #### *Wokwi Link:* [Suggesting and ensuring proper and timely medicine taking in Wokwi](https://wokwi.com/projects/456170387027473409) 
    
 7. Times of water drinking in a day 
 8. Smart Walking Stick and alert ⚠️
