@@ -60,7 +60,7 @@ void loop() {
   Blynk.virtualWrite(V13, hatht);
   if(batht>60){
     String hmessage="It has been recorded that there is no one in home for "+hatht+" min";
-    Blynk.logEvent("bath_time", hmessage);
+    Blynk.logEvent("home_time", hmessage);
   }
   t++;
   Blynk.run();
