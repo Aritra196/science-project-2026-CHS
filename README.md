@@ -6,6 +6,8 @@
 - Arghamegh Das
 - Aritra Mondal 
 
+## #ESP8266 is not suitable for IoT based medium-level school projects
+
 ## **Features:-**
 
 1. Temperature of room :white_check_mark:
