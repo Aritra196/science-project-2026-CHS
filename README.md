@@ -10,18 +10,18 @@
 
 1. Temperature of room :white_check_mark:
    
-   #### *Wokwi Link:* [https://wokwi.com/projects/456115310006639617] (Temperature of room in Wokwi)
+   #### *Wokwi Link:* [Temperature of room in Wokwi](https://wokwi.com/projects/456115310006639617) 
    
 3. Bathroom presence time and overtime alert 
 4. Absence time from home 
 5. Proper and timely medicine taking, suggestion and data logging ⚠️
    
-   #### *Wokwi Link:* [https://wokwi.com/projects/456170387027473409] (Suggesting, ensuring proper and timely medicine taking in Wokwi)
+   #### *Wokwi Link:* [Suggesting, ensuring proper and timely medicine taking in Wokwi](https://wokwi.com/projects/456170387027473409) 
    
 7. Times of water drinking in a day 
 8. Smart Walking Stick and alert ⚠️
    
-   #### *Wokwi Link:* [https://wokwi.com/projects/456258262819760129] (Walking stick fall alert)
+   #### *Wokwi Link:* [Walking stick fall alert](https://wokwi.com/projects/456258262819760129) 
 
 
 ## **Components used:-**
