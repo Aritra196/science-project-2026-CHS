@@ -31,6 +31,7 @@
 
 ## **Components used:-**
 1. ESP32-DevKitC V4 x 2 = ₹756
+   or ESP32-DevKitC V4 x 1 = ₹378 & ESP8266(if MPU6050 is used) x 1 = ₹198
 3. DHT11 Digital Temperature & Humidity Sensor x 1 ₹49
 4. IR Sensor x 8 ₹30x8 = ₹240
 5. ADXL335 Module 3-axis Analog Output Accelerometer x 1 ₹339
