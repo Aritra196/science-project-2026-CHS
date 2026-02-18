@@ -38,4 +38,4 @@
 
 ## **Connection**:-
 
-![](images/esp32_pinout.png)
+<img width="1600" height="1091" alt="esp32_devkitC_v4_pinlayout" src="https://github.com/user-attachments/assets/9fef0f57-8cb5-41ba-afa2-1cdfce85ec7c" />
