@@ -28,16 +28,16 @@
 
 
 ## **Components used:-**
-1. ESP32 x 1 ₹378
-2. NodeMCU(ESP8266) x 1 ₹198
-3. DHT22 Digital Temperature & Humidity Sensor x 1 ₹104
+1. ESP32-DevKitC V4 x 2 = ₹756
+3. DHT11 Digital Temperature & Humidity Sensor x 1 ₹49
 4. IR Sensor x 8 ₹30x8 = ₹240
-5. SW-420 Vibration Sensor x 1 ₹41
-6. Tower Pro SG90 Servo Motor x 3 ₹73x3=₹219
-7. LED
-8. Resistor
-9. Jumper cables
-10. Breadboard
+5. ADXL335 Module 3-axis Analog Output Accelerometer x 1 ₹339
+   Or, MPU-6050 3-Axis Accelerometer and Gyro Sensor x 1 ₹173
+7. Tower Pro SG90 Servo Motor x 3 ₹73x3=₹219
+8. LED
+9. Resistor
+10. Jumper cables
+11. Breadboard
 
 ## **Connection**:-
 
