@@ -11,9 +11,9 @@
 1. Temperature of room :white_check_mark:
 2. Bathroom presence time and overtime alert 
 3. Absence time from home 
-4. Proper and timely medicine taking, suggestion and data logging :warning_sign:
+4. Proper and timely medicine taking, suggestion and data logging ⚠️
 5. Times of water drinking in a day 
-6. Smart Walking Stick and alert :warning_sign:
+6. Smart Walking Stick and alert ⚠️
 
 ## **Components used:-**
 1. ESP32 x 1 ₹378
