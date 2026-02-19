@@ -47,7 +47,9 @@ void setup() {
   pinMode(L1pin, OUTPUT);
   pinMode(L2pin, OUTPUT);
   pinMode(L3pin, OUTPUT);
-  lcd.print("Smart Elder Assistance System");//Introductory words
+  lcd.print("Smart Elder");//Introductory words
+  lcd.setCursor(0,1);
+  lcd.print("Assistance System");
   delay(500);
   lcd.clear();
   Serial.begin(9600);
@@ -68,6 +70,8 @@ void loop() {
     lcd.clear();
     lcd.setCursor(0,0);
     lcd.print("Aciloc RD 20 8AM");
+    lcd.setCursor(0,1);
+    lcd.print("AMLOkind 5 10AM");
     if(digitalRead(IR1pin)==HIGH && pc1 != digitalRead(IR1pin)){
       c1++;
       pc1=1;
@@ -115,6 +119,8 @@ void loop() {
     lcd.clear();
     lcd.setCursor(0,0);
     lcd.print("AMLOkind 5 10AM");
+    lcd.setCursor(0,1);
+    lcd.print("Qutipin 25mg 5PM");
     if(digitalRead(IR2pin)==HIGH && pc2 != digitalRead(IR2pin)){
       c2++;
       pc2=1;
@@ -162,6 +168,8 @@ void loop() {
     lcd.clear();
     lcd.setCursor(0,0);
     lcd.print("Qutipin 25mg 5PM");
+    lcd.setCursor(0,1);
+    lcd.print("Alzolam 0.5 10PM");
     if(digitalRead(IR3pin)==HIGH && pc3 != digitalRead(IR3pin)){
       c3++;
       pc3=1;
@@ -209,6 +217,8 @@ void loop() {
     lcd.clear();
     lcd.setCursor(0,0);
     lcd.print("Alzolam 0.5 10PM");
+    lcd.setCursor(0,1);
+    lcd.print("Aciloc RD 20 8AM");
     if(digitalRead(IR3pin)==HIGH && pc3 != digitalRead(IR3pin)){
       c3++;
       pc3=1;
@@ -252,9 +262,6 @@ void loop() {
   if(t==simtime*2){
     delay(500);
     t=0;
-    lcd.clear();
-    lcd.setCursor(0,0);
-    lcd.print("New Day Begins..");
   }
   delay(500);
   lcd.clear();
