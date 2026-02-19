@@ -22,7 +22,7 @@
 
    #### *Wokwi Link:* [Home absence time](https://wokwi.com/projects/456294451771285505) 
    
-7. Proper and timely medicine taking, suggestion and data logging ⚠️
+7. Proper and timely medicine taking, suggestion and data logging :white_check_mark:
    
    #### *Wokwi Link:* [Suggesting and ensuring proper and timely medicine taking in Wokwi](https://wokwi.com/projects/456170387027473409) 
    
