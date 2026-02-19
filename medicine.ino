@@ -4,7 +4,7 @@
 #include <BlynkSimpleEsp32.h>
 #include <LiquidCrystal_I2C.h>
 #include <Servo.h>
-LiquidCrystal_I2C lcd(0x27, 20, 4);
+LiquidCrystal_I2C lcd(0x27, 16, 2);
 Servo s1;
 Servo s2;
 Servo s3;
@@ -71,10 +71,9 @@ void loop() {
       c1++;
       pc1==0;
     }
-    if(c1==3){
+    if(c1==3 && digitalRead(IR1pin)==LOW){
       m1++;
       Blynk.virtualWrite(V5, m1);
-      delay(3000);
       s1.write(0);
       pc1=0;
       digitalWrite(L1pin, LOW);
@@ -106,10 +105,9 @@ void loop() {
       c2++;
       pc2==0;
     }
-    if(c2==3){
+    if(c2==3 && digitalRead(IR2pin)==LOW){
       m2++;
       Blynk.virtualWrite(V6, m2);
-      delay(3000);
       s2.write(0);
       pc2=0;
       digitalWrite(L2pin, LOW);
@@ -141,10 +139,9 @@ void loop() {
       c3++;
       pc3==0;
     }
-    if(c3==3){
+    if(c3==3 && digitalRead(IR3pin)==LOW){
       m3++;
       Blynk.virtualWrite(V6, m3);
-      delay(3000);
       s3.write(0);
       pc3=0;
       digitalWrite(L3pin, LOW);
@@ -176,10 +173,9 @@ void loop() {
       c3++;
       pc3==0;
     }
-    if(c3==3){
+    if(c3==3 && digitalRead(IR3pin)==LOW){
       m3++;
       Blynk.virtualWrite(V6, m3);
-      delay(3000);
       s3.write(0);
       pc3=0;
       digitalWrite(L3pin, LOW);
