@@ -3,7 +3,7 @@
 #define BLYNK_AUTH_TOKEN "YEsgcapcOlKuTPionK3RGVVPF8k0wQ29"
 #include <BlynkSimpleEsp32.h>
 #include <LiquidCrystal_I2C.h>
-#include <Servo.h>
+#include <ESP32Servo.h>
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 Servo s1;
 Servo s2;
@@ -17,6 +17,8 @@ Servo s3;
 #define L1pin 5
 #define L2pin 17
 #define L3pin 19
+#define mini 500
+#define maxi 2400
 char ssid[] = "Wokwi-GUEST";
 char pass[] = "";
 
@@ -33,9 +35,12 @@ void setup() {
   Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
   lcd.init();
   lcd.backlight();
-  s1.attach(s1pin);
-  s2.attach(s2pin);
-  s3.attach(s3pin);
+  s1.setPeriodHertz(50);
+  s1.attach(s1pin, mini, maxi);
+  s2.setPeriodHertz(50);
+  s2.attach(s2pin, mini, maxi);
+  s3.setPeriodHertz(50);
+  s3.attach(s3pin, mini, maxi);
   pinMode(IR1pin, INPUT);
   pinMode(IR2pin, INPUT);
   pinMode(IR3pin, INPUT);
