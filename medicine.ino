@@ -23,9 +23,9 @@ char ssid[] = "Wokwi-GUEST";
 char pass[] = "";
 
 //container variable
-int c1,c2,c3;
-int m1,m2,m3,m4;
-int pc1,pc2,pc3;
+int c1=0,c2=0,c3=0;
+int m1=0,m2,m3=0,m4=0;
+int pc1=0,pc2=0,pc3=0;
 //time scale
 int simtime = 24*60;//Write the mins which represent 24 hrs
 
@@ -53,6 +53,9 @@ void setup() {
   delay(500);
   lcd.clear();
   Serial.begin(9600);
+  s1.write(90);
+  s2.write(90);
+  s3.write(90);
 }
 
 void loop() {
@@ -79,9 +82,9 @@ void loop() {
     }
     if(digitalRead(IR1pin)==LOW && c1==1){
       c1++;
-      pc1==0;
+      pc1=0;
     }
-    if(c1==3 && digitalRead(IR1pin)==LOW){
+    if(c1==3 && digitalRead(IR1pin)==LOW && pc1==1){
       m1++;
       Blynk.virtualWrite(V5, m1);
       s1.write(90);
@@ -128,9 +131,9 @@ void loop() {
     }
     if(digitalRead(IR2pin)==LOW && c2==1){
       c2++;
-      pc2==0;
+      pc2=0;
     }
-    if(c2==3 && digitalRead(IR2pin)==LOW){
+    if(c2==3 && digitalRead(IR2pin)==LOW && pc2==1){
       m2++;
       Blynk.virtualWrite(V6, m2);
       s2.write(90);
@@ -177,9 +180,9 @@ void loop() {
     }
     if(digitalRead(IR3pin)==LOW && c3==1){
       c3++;
-      pc3==0;
+      pc3=0;
     }
-    if(c3==3 && digitalRead(IR3pin)==LOW){
+    if(c3==3 && digitalRead(IR3pin)==LOW && pc3==1){
       m3++;
       Blynk.virtualWrite(V6, m3);
       s3.write(90);
@@ -226,11 +229,11 @@ void loop() {
     }
     if(digitalRead(IR3pin)==LOW && c3==1){
       c3++;
-      pc3==0;
+      pc3=0;
     }
-    if(c3==3 && digitalRead(IR3pin)==LOW){
+    if(c3==3 && digitalRead(IR3pin)==LOW && pc3==1){
       m4++;
-      Blynk.virtualWrite(V6, m3);
+      Blynk.virtualWrite(V6, m4);
       s3.write(90);
       pc3=0;
       digitalWrite(L3pin, LOW);
