@@ -22,7 +22,7 @@ char pass[] = "";
 
 //container variable
 int c1,c2,c3;
-int m1,m2,m3;
+int m1,m2,m3,m4;
 int pc1,pc2,pc3;
 //time scale
 int simtime = 24*60;//Write the mins which represent 24 hrs
@@ -84,6 +84,19 @@ void loop() {
     s1.write(0);
     digitalWrite(L1pin, LOW);
   }
+  //Loop-hole fixing mechanism
+  if(digitalRead(IR1pin)==HIGH && pc1 == digitalRead(IR1pin) && t*tscale>=9*7200 && t*tscale<=9.5*7200 && c1==2){
+      c1++;
+      pc1=1;
+    }
+  if(c1==3 && digitalRead(IR1pin)==LOW && t*tscale>=9*7200 && t*tscale<=9.5*7200){
+      m1++;
+      Blynk.virtualWrite(V5, m1);
+      s1.write(0);
+      pc1=0;
+      digitalWrite(L1pin, LOW);
+    }
+  //Loop-hole fixing mechanism ends
   //1st medicine at 8 AM ends
 
   //2nd medicine at 10:00 am(open)
@@ -118,6 +131,19 @@ void loop() {
     s2.write(0);
     digitalWrite(L2pin, LOW);
   }
+  //Loop-hole fixing mechanism
+  if(digitalRead(IR2pin)==HIGH && pc2 == digitalRead(IR2pin) && t*tscale>=11*7200 && t*tscale<=11.5*7200 && c2==2){
+      c2++;
+      pc2=1;
+    }
+  if(c2==3 && digitalRead(IR2pin)==LOW && t*tscale>=11*7200 && t*tscale<=11.5*7200){
+      m2++;
+      Blynk.virtualWrite(V6, m2);
+      s2.write(0);
+      pc2=0;
+      digitalWrite(L2pin, LOW);
+    }
+  //Loop-hole fixing mechanism ends
   //2nd medicine at 10 AM ends(close)
 
   //3rd medicine at 5 pm(open)
@@ -152,6 +178,19 @@ void loop() {
     s3.write(0);
     digitalWrite(L3pin, LOW);
   }
+  //Loop-hole fixing mechanism
+  if(digitalRead(IR3pin)==HIGH && pc3 == digitalRead(IR3pin) && t*tscale>=18*7200 && t*tscale<=18.5*7200 && c3==2){
+      c3++;
+      pc3=1;
+    }
+  if(c3==3 && digitalRead(IR3pin)==LOW && t*tscale>=18*7200 && t*tscale<=18.5*7200){
+      m3++;
+      Blynk.virtualWrite(V7, m3);
+      s3.write(0);
+      pc3=0;
+      digitalWrite(L3pin, LOW);
+    }
+  //Loop-hole fixing mechanism ends
   //1st medicine at 5 PM ends
 
   //4th medicine at 10 pm(open)
@@ -174,7 +213,7 @@ void loop() {
       pc3==0;
     }
     if(c3==3 && digitalRead(IR3pin)==LOW){
-      m3++;
+      m4++;
       Blynk.virtualWrite(V6, m3);
       s3.write(0);
       pc3=0;
@@ -186,6 +225,19 @@ void loop() {
     s3.write(0);
     digitalWrite(L3pin, LOW);
   }
+  //Loop-hole fixing mechanism
+  if(digitalRead(IR3pin)==HIGH && pc3 == digitalRead(IR3pin) && t*tscale>=23*7200 && t*tscale<=23.5*7200 && c3==2){
+      c3++;
+      pc3=1;
+    }
+  if(c3==3 && digitalRead(IR3pin)==LOW && t*tscale>=23*7200 && t*tscale<=23.5*7200){
+      m4++;
+      Blynk.virtualWrite(V8, m4);
+      s3.write(0);
+      pc3=0;
+      digitalWrite(L3pin, LOW);
+    }
+  //Loop-hole fixing mechanism ends
   //4th medicine at 10 PM ends
 
 
