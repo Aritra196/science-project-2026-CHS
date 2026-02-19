@@ -24,13 +24,32 @@ char pass[] = "";
 
 //container variable
 int c1=0,c2=0,c3=0;
-int m1=0,m2,m3=0,m4=0;
+int m1=0,m2=0,m3=0,m4=0;
 int pc1=0,pc2=0,pc3=0;
 //time scale
 int simtime = 24*60;//Write the mins which represent 24 hrs
 
 int tscale = (24*3600)/simtime;//Scale of time
 int t=0;
+
+BLYNK_CONNECTED(){
+  Blynk.syncVirtual(V5);
+  Blynk.syncVirtual(V6);
+  Blynk.syncVirtual(V7);
+  Blynk.syncVirtual(V8);
+}
+BLYNK_WRITE(V5){
+  m1=param.asInt();
+}
+BLYNK_WRITE(V6){
+  m2=param.asInt();
+}
+BLYNK_WRITE(V7){
+  m3=param.asInt();
+}
+BLYNK_WRITE(V8){
+  m4=param.asInt();
+}
 void setup() {
   Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
   lcd.init();
