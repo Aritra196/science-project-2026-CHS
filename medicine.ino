@@ -233,7 +233,7 @@ void loop() {
     }
     if(c3==3 && digitalRead(IR3pin)==LOW && pc3==1){
       m4++;
-      Blynk.virtualWrite(V6, m4);
+      Blynk.virtualWrite(V8, m4);
       s3.write(90);
       pc3=0;
       digitalWrite(L3pin, LOW);
