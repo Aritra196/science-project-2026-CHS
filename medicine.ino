@@ -56,14 +56,15 @@ void setup() {
 }
 
 void loop() {
-  if(Serial.available())
-    t=Serial.read();
+  if(Serial.available()>1)
+    t=Serial.parseInt();
+  Serial.println(t*tscale/7200);
   //-----------------------Medicine---------------------//
   //1st medicine at 8:00 am(open)
   if(t*tscale==8*7200)
   {
     c1=0;
-    s1.write(90);
+    s1.write(0);
     digitalWrite(L1pin, HIGH);
   }
   if(t*tscale>=8*7200 && t*tscale<9*7200){
@@ -83,14 +84,14 @@ void loop() {
     if(c1==3 && digitalRead(IR1pin)==LOW){
       m1++;
       Blynk.virtualWrite(V5, m1);
-      s1.write(0);
+      s1.write(90);
       pc1=0;
       digitalWrite(L1pin, LOW);
     }
   }
   if(c1==0 && t*tscale==9*7200){
     Blynk.virtualWrite(V9, "Aciloc RD 20 has not been taken");
-    s1.write(0);
+    s1.write(90);
     digitalWrite(L1pin, LOW);
   }
   //Loop-hole fixing mechanism
@@ -101,7 +102,7 @@ void loop() {
   if(c1==3 && digitalRead(IR1pin)==LOW && t*tscale>=9*7200 && t*tscale<=9.5*7200){
       m1++;
       Blynk.virtualWrite(V5, m1);
-      s1.write(0);
+      s1.write(90);
       pc1=0;
       digitalWrite(L1pin, LOW);
     }
@@ -112,7 +113,7 @@ void loop() {
   if(t*tscale==10*7200)
   {
     c2=0;
-    s2.write(90);
+    s2.write(0);
     digitalWrite(L2pin, HIGH);
   }
   if(t*tscale>=10*7200 && t*tscale<11*7200){
@@ -132,14 +133,14 @@ void loop() {
     if(c2==3 && digitalRead(IR2pin)==LOW){
       m2++;
       Blynk.virtualWrite(V6, m2);
-      s2.write(0);
+      s2.write(90);
       pc2=0;
       digitalWrite(L2pin, LOW);
     }
   }
   if(c2==0 && t*tscale==11*7200){
     Blynk.virtualWrite(V9, "AMLOkind 5 has not been taken");
-    s2.write(0);
+    s2.write(90);
     digitalWrite(L2pin, LOW);
   }
   //Loop-hole fixing mechanism
@@ -150,7 +151,7 @@ void loop() {
   if(c2==3 && digitalRead(IR2pin)==LOW && t*tscale>=11*7200 && t*tscale<=11.5*7200){
       m2++;
       Blynk.virtualWrite(V6, m2);
-      s2.write(0);
+      s2.write(90);
       pc2=0;
       digitalWrite(L2pin, LOW);
     }
@@ -161,7 +162,7 @@ void loop() {
   if(t*tscale==17*7200)
   {
     c3=0;
-    s3.write(90);
+    s3.write(0);
     digitalWrite(L3pin, HIGH);
   }
   if(t*tscale>=17*7200 && t*tscale<18*7200){
@@ -181,14 +182,14 @@ void loop() {
     if(c3==3 && digitalRead(IR3pin)==LOW){
       m3++;
       Blynk.virtualWrite(V6, m3);
-      s3.write(0);
+      s3.write(90);
       pc3=0;
       digitalWrite(L3pin, LOW);
     }
   }
   if(c3==0 && t*tscale==18*7200){
     Blynk.virtualWrite(V9, "Qutipin 25mg has not been taken");
-    s3.write(0);
+    s3.write(90);
     digitalWrite(L3pin, LOW);
   }
   //Loop-hole fixing mechanism
@@ -199,7 +200,7 @@ void loop() {
   if(c3==3 && digitalRead(IR3pin)==LOW && t*tscale>=18*7200 && t*tscale<=18.5*7200){
       m3++;
       Blynk.virtualWrite(V7, m3);
-      s3.write(0);
+      s3.write(90);
       pc3=0;
       digitalWrite(L3pin, LOW);
     }
@@ -210,7 +211,7 @@ void loop() {
   if(t*tscale==22*7200)
   {
     c3=0;
-    s3.write(90);
+    s3.write(0);
     digitalWrite(L3pin, HIGH);
   }
   if(t*tscale>=22*7200 && t*tscale<23*7200){
@@ -230,14 +231,14 @@ void loop() {
     if(c3==3 && digitalRead(IR3pin)==LOW){
       m4++;
       Blynk.virtualWrite(V6, m3);
-      s3.write(0);
+      s3.write(90);
       pc3=0;
       digitalWrite(L3pin, LOW);
     }
   }
   if(c3==0 && t*tscale==23*7200){
     Blynk.virtualWrite(V9, "Alzolam 0.5mg has not been taken");
-    s3.write(0);
+    s3.write(90);
     digitalWrite(L3pin, LOW);
   }
   //Loop-hole fixing mechanism
@@ -248,7 +249,7 @@ void loop() {
   if(c3==3 && digitalRead(IR3pin)==LOW && t*tscale>=23*7200 && t*tscale<=23.5*7200){
       m4++;
       Blynk.virtualWrite(V8, m4);
-      s3.write(0);
+      s3.write(90);
       pc3=0;
       digitalWrite(L3pin, LOW);
     }
