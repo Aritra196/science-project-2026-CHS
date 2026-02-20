@@ -66,7 +66,7 @@
 9. Wiring ≈ ₹4,000
 10. PCB ≈ ₹500
 11. Other parts ≈ ₹600
-    **Total:- ≈ ₹9,250
+    **Total:- ≈ ₹9,250**
 
 
 
