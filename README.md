@@ -44,7 +44,7 @@
 10. Jumper cables
 11. Breadboard
 
-## Approximate Cost for our project(Electronic components only:- 
+## Approximate Cost for our project(Electronic components only):- 
 -  ≈ ₹1,800
 
 
