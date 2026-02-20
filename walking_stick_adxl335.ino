@@ -1,7 +1,7 @@
 #define BLYNK_TEMPLATE_ID "TMPL37trpYsQK"
 #define BLYNK_TEMPLATE_NAME "Science project 2026"
 #define BLYNK_AUTH_TOKEN "tmoubT4AhCYCm9SL--77ijyNDOaP5DkC"
-#include <BlynkSimpleEsp8266.h>
+#include <BlynkSimpleEsp32.h>
 MPU6050 mpu;
 char ssid[] = "Wokwi-GUEST";
 char pass[] = "";
@@ -25,7 +25,7 @@ void loop() {
   //Serial.println("");
   float A = sqrt(pax*pax + pay*pay + paz*paz);//Root Mean Square of processed value of acceleration along x,y and z axis
   if(A<= 0.4 || A>=2.5)
-      BLynk.logEvent("fall_alert");//Send Alert(Email alert) to Blynk
+      Blynk.logEvent("fall_alert");//Send Alert(Email alert) to Blynk
   Blynk.run();
   delay(50);
 }
