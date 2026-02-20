@@ -14,9 +14,9 @@ Servo s3;
 #define IR1pin 26
 #define IR2pin 25
 #define IR3pin 33
-#define L1pin 5
+#define L1pin 18
 #define L2pin 17
-#define L3pin 19
+#define L3pin 16
 #define mini 500
 #define maxi 2400
 char ssid[] = "Wokwi-GUEST";
