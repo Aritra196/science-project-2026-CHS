@@ -19,24 +19,24 @@ void setup() {
 }
 
 void loop() {
-  if(digitalRead(BIRin)==HIGH && baths==0){
-    baths++;
+  if(digitalRead(BIRin)==HIGH && baths==0 && digitalRead(BIRout)==LOW){
+    baths=1;
     pbaths=BIRin;
   }
-  if(digitalRead(BIRout)==HIGH && baths==0){
-    baths++;
+  if(digitalRead(BIRout)==HIGH && baths==0 && digitalRead(BIRin)==LOW){
+    baths=1;
     pbaths=BIRout;
   }
 
-  if(pbaths==BIRin && baths==1 && digitalRead(BIRout)==HIGH){
-    baths=2;
-    bpre++;
-  }
   if(pbaths==BIRout && baths==1 && digitalRead(BIRin)==HIGH){
     baths=2;
-    bpre--;
+    bpre=bpre+1;
   }
-  if(digitalRead(BIRin==LOW && BIRout==LOW && baths==2))
+  if(pbaths==BIRin && baths==1 && digitalRead(BIRout)==HIGH){
+    baths=2;
+    bpre=bpre-1;
+  }
+  if(digitalRead(BIRin)==LOW && digitalRead(BIRout)==LOW && baths==2)
     baths=0;
   if(bpre>0 && ((t*tscale/2)%60)==0 && t>0){
     batht+=60/tscale;
