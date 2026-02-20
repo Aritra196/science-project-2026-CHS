@@ -31,6 +31,17 @@
    
    #### *Wokwi Link:* [Walking stick fall alert](https://wokwi.com/projects/456258262819760129) 
 
+## **Approximate Cost for our project(Electronic components only:- **
+-  ≈ ₹1,800
+   
+## **Approximate Cost in REAL LIFE(Only Electronics):- **
+1. ESP32-DevKitC V4 x 2 = ₹756
+2. DS18B20 Digital Temperature Sensor Probe x 1 = ₹72
+3. E18-D80NK Adjustable 3–80cm Infrared Proximity Sensor Switch x 8 = ₹1,176
+4. TowerPro MG995 Metal Gear Servo Motor (180° Rotation) x 3 = ₹909
+5. 6DOF BOSCH GY-BMI160 Module 6-axis Acceleration Gyro x 1 = ₹479
+6. KP 3.7 V DC 5000 mAh Lithium Polymer Rechargeable Battery, KP-654677 x 1 = ₹565
+
 
 ## **Components used:-**
 1. ESP32-DevKitC V4 x 2 = ₹756
