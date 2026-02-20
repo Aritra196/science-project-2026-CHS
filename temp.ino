@@ -6,7 +6,7 @@
 
 DHTesp dht;
 int temp;
-#define heater 23
+#define heater 16
 #define fan 18
 int mheater = 0;
 int mfan = 0;
@@ -33,7 +33,7 @@ BLYNK_WRITE(V2){
     mfan=0;
 }
 void setup() {
-  dht.setup(16, DHTesp::DHT22);
+  dht.setup(14, DHTesp::DHT11);
   pinMode(heater, OUTPUT);
   pinMode(fan, OUTPUT);
   Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
