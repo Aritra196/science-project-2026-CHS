@@ -1,7 +1,7 @@
 #define BLYNK_TEMPLATE_ID "TMPL37trpYsQK"
 #define BLYNK_TEMPLATE_NAME "Science project 2026"
 #define BLYNK_AUTH_TOKEN "YEsgcapcOlKuTPionK3RGVVPF8k0wQ29"
-#define <BlynkSimpleEsp32.h>
+#include <BlynkSimpleEsp32.h>
 char ssid[] = "Wokwi-GUEST";
 char pass[] = "";
 int BIRout = 35;
@@ -29,11 +29,11 @@ void loop() {
   }
 
   if(pbaths==BIRin && baths==1 && digitalRead(BIRout)==HIGH){
-    baths==2;
+    baths=2;
     bpre++;
   }
   if(pbaths==BIRout && baths==1 && digitalRead(BIRin)==HIGH){
-    baths==2;
+    baths=2;
     bpre--;
   }
   if(digitalRead(BIRin==LOW && BIRout==LOW && baths==2))
@@ -59,7 +59,7 @@ void loop() {
   Blynk.virtualWrite(V10, bpre);
   Blynk.virtualWrite(V11, batht);
   if(batht>60){
-    String message="It has been recorded that a person is in bathroom for "+batht+" min";
+    String message="It has been recorded that a person is in bathroom for "+String(batht)+" min";
     Blynk.logEvent("bath_time", message);
   }
   t++;
