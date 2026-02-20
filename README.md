@@ -47,4 +47,8 @@
 
 ## **Connection**:-
 
-<img width="1600" height="1091" alt="esp32_devkitC_v4_pinlayout" src="https://github.com/user-attachments/assets/9fef0f57-8cb5-41ba-afa2-1cdfce85ec7c" />
+<img width="1600" height="1091" alt="esp32-devkitC-v4-pinout" src="https://github.com/user-attachments/assets/50d1bd97-a435-4ff2-b974-ac339be4537a" />
+
+<img width="1600" height="1091" alt="esp32-devkitC-v4-modified-pinout" src="https://github.com/user-attachments/assets/bff52f79-5fa3-43fe-b8ca-118f1af7fe9c" />
+
+
