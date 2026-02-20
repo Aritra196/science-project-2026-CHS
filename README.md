@@ -14,11 +14,11 @@
    
    #### *Wokwi Link:* [Temperature of room in Wokwi](https://wokwi.com/projects/456115310006639617) 
    
-3. Bathroom presence time and overtime alert ⚠️
+3. Bathroom presence time and overtime alert :white_check_mark:
 
    #### *Wokwi Link:* [Bathroom presence time](https://wokwi.com/projects/456265230626128897) 
    
-5. Absence time from home ⚠️
+5. Absence time from home :white_check_mark:
 
    #### *Wokwi Link:* [Home absence time](https://wokwi.com/projects/456294451771285505) 
    
