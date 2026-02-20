@@ -1,7 +1,7 @@
 #define BLYNK_TEMPLATE_ID "TMPL37trpYsQK"
 #define BLYNK_TEMPLATE_NAME "Science project 2026"
 #define BLYNK_AUTH_TOKEN "YEsgcapcOlKuTPionK3RGVVPF8k0wQ29"
-#define <BlynkSimpleEsp32.h>
+#include <BlynkSimpleEsp32.h>
 char ssid[] = "Wokwi-GUEST";
 char pass[] = "";
 int HIRout = 36;
@@ -29,11 +29,11 @@ void loop() {
   }
 
   if(phaths==HIRin && haths==1 && digitalRead(HIRout)==HIGH){
-    haths==2;
+    haths=2;
     hpre++;
   }
   if(phaths==HIRout && haths==1 && digitalRead(HIRin)==HIGH){
-    haths==2;
+    haths=2;
     hpre--;
   }
   if(digitalRead(HIRin==LOW && HIRout==LOW && haths==2))
@@ -59,7 +59,7 @@ void loop() {
   Blynk.virtualWrite(V12, hpre);
   Blynk.virtualWrite(V13, hatht);
   if(batht>60){
-    String hmessage="It has been recorded that there is no one in home for "+hatht+" min";
+    String hmessage="It has been recorded that there is no one in home for "+String(hatht)+" min";
     Blynk.logEvent("home_time", hmessage);
   }
   t++;
