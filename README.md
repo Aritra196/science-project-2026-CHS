@@ -27,7 +27,7 @@
    #### *Wokwi Link:* [Suggesting and ensuring proper and timely medicine taking in Wokwi](https://wokwi.com/projects/456170387027473409) 
    
 8. Times of water drinking in a day :white_check_mark:
-9. Smart Walking Stick and alert ⚠️
+9. Smart Walking Stick and alert :white_check_mark:
    
    #### *Wokwi Link:* [Walking stick fall alert](https://wokwi.com/projects/456258262819760129) 
 
