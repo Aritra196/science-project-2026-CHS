@@ -2,13 +2,13 @@
 
 ###### Also known as *Project Smart Warranty Expired Club*
 
-## **Members:-**
+## Members:-
 - Arghamegh Das
 - Aritra Mondal 
 
 ## "#ESP8266 is not suitable for IoT based medium-level school projects"
 
-## **Features:-**
+## Features:-
 
 1. Temperature of room :white_check_mark:
    
@@ -31,7 +31,7 @@
    
    #### *Wokwi Link:* [Walking stick fall alert](https://wokwi.com/projects/456258262819760129) 
 
-## **Components used:-**
+## Components used:-
 1. ESP32-DevKitC V4 x 2 = ₹756
    or ESP32-DevKitC V4 x 1 = ₹378 & ESP8266(if MPU6050 is used) x 1 = ₹198
 3. DHT11 Digital Temperature & Humidity Sensor x 1 ₹49
@@ -44,17 +44,17 @@
 10. Jumper cables
 11. Breadboard
 
-## **Approximate Cost for our project(Electronic components only:- **
+## Approximate Cost for our project(Electronic components only:- 
 -  ≈ ₹1,800
 
 
-## **Connection**:-
+## Connection:-
 
 <img width="1600" height="1091" alt="esp32-devkitC-v4-pinout" src="https://github.com/user-attachments/assets/50d1bd97-a435-4ff2-b974-ac339be4537a" />
 
 <img width="1600" height="1091" alt="esp32-devkitC-v4-modified-pinout" src="https://github.com/user-attachments/assets/bff52f79-5fa3-43fe-b8ca-118f1af7fe9c" />
 
-## **Approximate Cost in REAL LIFE(Only Electronics):- **
+## Approximate Cost in REAL LIFE(Only Electronics):- 
 1. ESP32-DevKitC V4 x 2 = ₹756
 2. DS18B20 Digital Temperature Sensor Probe x 1 = ₹72
 3. E18-D80NK Adjustable 3–80cm Infrared Proximity Sensor Switch x 8 = ₹1,176
