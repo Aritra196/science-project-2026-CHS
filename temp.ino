@@ -7,7 +7,7 @@
 DHTesp dht;
 int temp;
 #define heater 16
-#define fan 18
+#define fan 19
 int mheater = 0;
 int mfan = 0;
 char ssid[] = "Wokwi-GUEST";
