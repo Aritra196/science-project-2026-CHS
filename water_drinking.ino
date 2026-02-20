@@ -6,7 +6,7 @@
 char ssid[] = "Wokwi-GUEST";
 char pass[] = "";
 int water;
-int wstate:
+int wstate;
 void setup(){
     pinMode(DIR, INPUT);
     Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
