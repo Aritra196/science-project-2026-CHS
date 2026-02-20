@@ -8,11 +8,11 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 Servo s1;
 Servo s2;
 Servo s3;
-#define s1pin 4
-#define s2pin 14
-#define s3pin 27
-#define IR1pin 3
-#define IR2pin 1
+#define s1pin 23
+#define s2pin 1
+#define s3pin 3
+#define IR1pin 26
+#define IR2pin 25
 #define IR3pin 33
 #define L1pin 5
 #define L2pin 17
