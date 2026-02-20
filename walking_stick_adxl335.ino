@@ -2,7 +2,6 @@
 #define BLYNK_TEMPLATE_NAME "Science project 2026"
 #define BLYNK_AUTH_TOKEN "tmoubT4AhCYCm9SL--77ijyNDOaP5DkC"
 #include <BlynkSimpleEsp32.h>
-MPU6050 mpu;
 char ssid[] = "Wokwi-GUEST";
 char pass[] = "";
 void setup() {
@@ -11,9 +10,9 @@ void setup() {
 }
 
 void loop() {
-  int rax = analogRead(12);
-  int ray = analogRead(14);
-  int raz = analogRead(27);
+  int rax = analogRead(33);
+  int ray = analogRead(25);
+  int raz = analogRead(26);
   float ax = rax*3.3/4095.0;
   float ay = ray*3.3/4095.0;
   float az = raz*3.3/4095.0;
