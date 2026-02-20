@@ -33,7 +33,7 @@ void loop() {
   float Va = abs(pgx) + abs(pgy) + abs(pgz);//Sum of absolute value of processed value of angular velocity along x, y and z axis
   if(A<= 0.4 || A>=2.5){
     if(Va>=250){
-      BLynk.logEvent("fall_alert");//Send Alert(Email alert) to Blynk
+      Blynk.logEvent("fall_alert");//Send Alert(Email alert) to Blynk
     }
   }
   Blynk.run();
