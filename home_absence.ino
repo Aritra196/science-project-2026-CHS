@@ -19,24 +19,24 @@ void setup() {
 }
 
 void loop() {
-  if(digitalRead(HIRin)==HIGH && haths==0){
+  if(digitalRead(HIRin)==HIGH && haths==0 && digitalRead(HIRout)==LOW){
     haths++;
     phaths=HIRin;
   }
-  if(digitalRead(HIRout)==HIGH && haths==0){
+  if(digitalRead(HIRout)==HIGH && haths==0 && digitalRead(HIRin)==LOW){
     haths++;
     phaths=HIRout;
   }
 
   if(phaths==HIRin && haths==1 && digitalRead(HIRout)==HIGH){
     haths=2;
-    hpre++;
+    hpre=hpre-1;
   }
   if(phaths==HIRout && haths==1 && digitalRead(HIRin)==HIGH){
     haths=2;
-    hpre--;
+    hpre=hpre+1;
   }
-  if(digitalRead(HIRin==LOW && HIRout==LOW && haths==2))
+  if(digitalRead(HIRin)==LOW && digitalRead(HIRout)==LOW && haths==2))
     haths=0;
   if(hpre>0 && ((t*tscale/2)%60)==0 && t>0){
     hatht+=60/tscale;
