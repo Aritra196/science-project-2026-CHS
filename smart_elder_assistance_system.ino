@@ -45,6 +45,7 @@ int simtime = 24*60;//Write the mins which represent 24 hrs
 
 int tscale = (24*3600)/simtime;//Scale of time
 int t=0;
+int hr, mint;
 //---------------WiFi---------------------//
 char ssid[] = "Wokwi-GUEST";
 char pass[] = "";
