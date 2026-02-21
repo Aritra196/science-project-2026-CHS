@@ -148,24 +148,24 @@ void loop() {
   Blynk.virtualWrite(V0, temp);
   //---------------------------------------------------//
   //-----------------------Bathroom-----------------------//
-  if(digitalRead(BIRin)==HIGH && baths==0 && digitalRead(BIRout)==LOW){
+  if(digitalRead(BIRin)==LOW && baths==0 && digitalRead(BIRout)==HIGH){
     baths=1;
     pbaths=BIRin;
   }
-  if(digitalRead(BIRout)==HIGH && baths==0 && digitalRead(BIRin)==LOW){
+  if(digitalRead(BIRout)==LOW && baths==0 && digitalRead(BIRin)==HIGH){
     baths=1;
     pbaths=BIRout;
   }
 
-  if(pbaths==BIRout && baths==1 && digitalRead(BIRin)==HIGH){
+  if(pbaths==BIRout && baths==1 && digitalRead(BIRin)==LOW){
     baths=2;
     bpre=bpre+1;
   }
-  if(pbaths==BIRin && baths==1 && digitalRead(BIRout)==HIGH){
+  if(pbaths==BIRin && baths==1 && digitalRead(BIRout)==LOW){
     baths=2;
     bpre=bpre-1;
   }
-  if(digitalRead(BIRin)==LOW && digitalRead(BIRout)==LOW && baths==2)
+  if(digitalRead(BIRin)==HIGH && digitalRead(BIRout)==HIGH && baths==2)
     baths=0;
 
   if(bpre>0 && ((t*tscale/2)%60)==0 && t>0){
@@ -181,24 +181,24 @@ void loop() {
   }
   //------------------------------------------------------//
   //------------------------Home--------------------------//
-  if(digitalRead(HIRin)==HIGH && haths==0 && digitalRead(HIRout)==LOW){
+  if(digitalRead(HIRin)==LOW && haths==0 && digitalRead(HIRout)==HIGH){
     haths++;
     phaths=HIRin;
   }
-  if(digitalRead(HIRout)==HIGH && haths==0 && digitalRead(HIRin)==LOW){
+  if(digitalRead(HIRout)==LOW && haths==0 && digitalRead(HIRin)==HIGH){
     haths++;
     phaths=HIRout;
   }
 
-  if(phaths==HIRin && haths==1 && digitalRead(HIRout)==HIGH){
+  if(phaths==HIRin && haths==1 && digitalRead(HIRout)==LOW){
     haths=2;
     hpre=hpre-1;
   }
-  if(phaths==HIRout && haths==1 && digitalRead(HIRin)==HIGH){
+  if(phaths==HIRout && haths==1 && digitalRead(HIRin)==LOW){
     haths=2;
     hpre=hpre+1;
   }
-  if(digitalRead(HIRin)==LOW && digitalRead(HIRout)==LOW && haths==2)
+  if(digitalRead(HIRin)==HIGH && digitalRead(HIRout)==HIGH && haths==2)
     haths=0;
 
   if(hpre>0 && ((t*tscale/2)%60)==0 && t>0){
