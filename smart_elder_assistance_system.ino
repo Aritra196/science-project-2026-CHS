@@ -222,15 +222,15 @@ void loop() {
     digitalWrite(L1pin, HIGH);
   }
   if(t*tscale>=8*7200 && t*tscale<9*7200){
-    if(digitalRead(IR1pin)==HIGH && pc1 != digitalRead(IR1pin)){
+    if(digitalRead(IR1pin)==LOW && pc1 == digitalRead(IR1pin)){
       c1++;
       pc1=1;
     }
-    if(digitalRead(IR1pin)==LOW && c1==1){
+    if(digitalRead(IR1pin)==HIGH && c1==1){
       c1++;
       pc1=0;
     }
-    if(c1==3 && digitalRead(IR1pin)==LOW && pc1==1){
+    if(c1==3 && digitalRead(IR1pin)==HIGH && pc1==1){
       m1++;
       Blynk.virtualWrite(V5, m1);
       s1.write(90);
@@ -244,11 +244,11 @@ void loop() {
     digitalWrite(L1pin, LOW);
   }
   //Loop-hole fixing mechanism
-  if(digitalRead(IR1pin)==HIGH && pc1 == digitalRead(IR1pin) && t*tscale>=9*7200 && t*tscale<=9.5*7200 && c1==2){
+  if(digitalRead(IR1pin)==LOW && pc1 != digitalRead(IR1pin) && t*tscale>=9*7200 && t*tscale<=9.5*7200 && c1==2){
       c1++;
       pc1=1;
     }
-  if(c1==3 && digitalRead(IR1pin)==LOW && t*tscale>=9*7200 && t*tscale<=9.5*7200){
+  if(c1==3 && digitalRead(IR1pin)==HIGH && t*tscale>=9*7200 && t*tscale<=9.5*7200){
       m1++;
       Blynk.virtualWrite(V5, m1);
       s1.write(90);
@@ -266,15 +266,15 @@ void loop() {
     digitalWrite(L2pin, HIGH);
   }
   if(t*tscale>=10*7200 && t*tscale<11*7200){
-    if(digitalRead(IR2pin)==HIGH && pc2 != digitalRead(IR2pin)){
+    if(digitalRead(IR2pin)==LOW && pc2 == digitalRead(IR2pin)){
       c2++;
       pc2=1;
     }
-    if(digitalRead(IR2pin)==LOW && c2==1){
+    if(digitalRead(IR2pin)==HIGH && c2==1){
       c2++;
       pc2=0;
     }
-    if(c2==3 && digitalRead(IR2pin)==LOW && pc2==1){
+    if(c2==3 && digitalRead(IR2pin)==HIGH && pc2==1){
       m2++;
       Blynk.virtualWrite(V6, m2);
       s2.write(90);
@@ -288,11 +288,11 @@ void loop() {
     digitalWrite(L2pin, LOW);
   }
   //Loop-hole fixing mechanism
-  if(digitalRead(IR2pin)==HIGH && pc2 == digitalRead(IR2pin) && t*tscale>=11*7200 && t*tscale<=11.5*7200 && c2==2){
+  if(digitalRead(IR2pin)==LOW && pc2 != digitalRead(IR2pin) && t*tscale>=11*7200 && t*tscale<=11.5*7200 && c2==2){
       c2++;
       pc2=1;
     }
-  if(c2==3 && digitalRead(IR2pin)==LOW && t*tscale>=11*7200 && t*tscale<=11.5*7200){
+  if(c2==3 && digitalRead(IR2pin)==HIGH && t*tscale>=11*7200 && t*tscale<=11.5*7200){
       m2++;
       Blynk.virtualWrite(V6, m2);
       s2.write(90);
@@ -310,15 +310,15 @@ void loop() {
     digitalWrite(L3pin, HIGH);
   }
   if(t*tscale>=17*7200 && t*tscale<18*7200){
-    if(digitalRead(IR3pin)==HIGH && pc3 != digitalRead(IR3pin)){
+    if(digitalRead(IR3pin)==LOW && pc3 == digitalRead(IR3pin)){
       c3++;
       pc3=1;
     }
-    if(digitalRead(IR3pin)==LOW && c3==1){
+    if(digitalRead(IR3pin)==HIGH && c3==1){
       c3++;
       pc3=0;
     }
-    if(c3==3 && digitalRead(IR3pin)==LOW && pc3==1){
+    if(c3==3 && digitalRead(IR3pin)==HIGH && pc3==1){
       m3++;
       Blynk.virtualWrite(V7, m3);
       s3.write(90);
@@ -332,11 +332,11 @@ void loop() {
     digitalWrite(L3pin, LOW);
   }
   //Loop-hole fixing mechanism
-  if(digitalRead(IR3pin)==HIGH && pc3 == digitalRead(IR3pin) && t*tscale>=18*7200 && t*tscale<=18.5*7200 && c3==2){
+  if(digitalRead(IR3pin)==LOW && pc3 != digitalRead(IR3pin) && t*tscale>=18*7200 && t*tscale<=18.5*7200 && c3==2){
       c3++;
       pc3=1;
     }
-  if(c3==3 && digitalRead(IR3pin)==LOW && t*tscale>=18*7200 && t*tscale<=18.5*7200){
+  if(c3==3 && digitalRead(IR3pin)==HIGH && t*tscale>=18*7200 && t*tscale<=18.5*7200){
       m3++;
       Blynk.virtualWrite(V7, m3);
       s3.write(90);
@@ -354,15 +354,15 @@ void loop() {
     digitalWrite(L3pin, HIGH);
   }
   if(t*tscale>=22*7200 && t*tscale<23*7200){
-    if(digitalRead(IR3pin)==HIGH && pc3 != digitalRead(IR3pin)){
+    if(digitalRead(IR3pin)==LOW && pc3 == digitalRead(IR3pin)){
       c3++;
       pc3=1;
     }
-    if(digitalRead(IR3pin)==LOW && c3==1){
+    if(digitalRead(IR3pin)==HIGH && c3==1){
       c3++;
       pc3=0;
     }
-    if(c3==3 && digitalRead(IR3pin)==LOW && pc3==1){
+    if(c3==3 && digitalRead(IR3pin)==HIGH && pc3==1){
       m4++;
       Blynk.virtualWrite(V8, m4);
       s3.write(90);
@@ -376,11 +376,11 @@ void loop() {
     digitalWrite(L3pin, LOW);
   }
   //Loop-hole fixing mechanism
-  if(digitalRead(IR3pin)==HIGH && pc3 == digitalRead(IR3pin) && t*tscale>=23*7200 && t*tscale<=23.5*7200 && c3==2){
+  if(digitalRead(IR3pin)==LOW && pc3 != digitalRead(IR3pin) && t*tscale>=23*7200 && t*tscale<=23.5*7200 && c3==2){
       c3++;
       pc3=1;
     }
-  if(c3==3 && digitalRead(IR3pin)==LOW && t*tscale>=23*7200 && t*tscale<=23.5*7200){
+  if(c3==3 && digitalRead(IR3pin)==HIGH && t*tscale>=23*7200 && t*tscale<=23.5*7200){
       m4++;
       Blynk.virtualWrite(V8, m4);
       s3.write(90);
