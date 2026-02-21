@@ -198,7 +198,7 @@ void loop() {
     haths=2;
     hpre=hpre+1;
   }
-  if(digitalRead(HIRin)==LOW && digitalRead(HIRout)==LOW && haths==2))
+  if(digitalRead(HIRin)==LOW && digitalRead(HIRout)==LOW && haths==2)
     haths=0;
 
   if(hpre>0 && ((t*tscale/2)%60)==0 && t>0){
