@@ -439,5 +439,4 @@ void loop() {
     t=0;
   }
   delay(500);
-  lcd.clear();
 }
