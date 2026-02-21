@@ -6,7 +6,7 @@
 
 DHTesp dht;
 int temp;
-#define heater 16
+#define heater 5
 #define fan 19
 int mheater = 0;
 int mfan = 0;
