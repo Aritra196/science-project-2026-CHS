@@ -24,7 +24,7 @@ Servo s3;
 #define L3pin 16
 #define mini 500
 #define maxi 2400
-#define heater 16
+#define heater 5
 #define fan 19
 int BIRout = 35;
 int BIRin = 34;
