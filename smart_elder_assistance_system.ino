@@ -213,7 +213,7 @@ void loop() {
     Blynk.logEvent("home_time", hmessage);
   }
   //------------------------------------------------------//
-  //-----------------------Medicine---------------------//
+   //-----------------------Medicine---------------------//
   //1st medicine at 8:00 am(open)
   if(t*tscale==8*7200)
   {
@@ -222,11 +222,6 @@ void loop() {
     digitalWrite(L1pin, HIGH);
   }
   if(t*tscale>=8*7200 && t*tscale<9*7200){
-    lcd.clear();
-    lcd.setCursor(0,0);
-    lcd.print("Aciloc RD 20 8AM");
-    lcd.setCursor(0,1);
-    lcd.print("AMLOkind 5 10AM");
     if(digitalRead(IR1pin)==HIGH && pc1 != digitalRead(IR1pin)){
       c1++;
       pc1=1;
@@ -271,11 +266,6 @@ void loop() {
     digitalWrite(L2pin, HIGH);
   }
   if(t*tscale>=10*7200 && t*tscale<11*7200){
-    lcd.clear();
-    lcd.setCursor(0,0);
-    lcd.print("AMLOkind 5 10AM");
-    lcd.setCursor(0,1);
-    lcd.print("Qutipin 25mg 5PM");
     if(digitalRead(IR2pin)==HIGH && pc2 != digitalRead(IR2pin)){
       c2++;
       pc2=1;
@@ -320,11 +310,6 @@ void loop() {
     digitalWrite(L3pin, HIGH);
   }
   if(t*tscale>=17*7200 && t*tscale<18*7200){
-    lcd.clear();
-    lcd.setCursor(0,0);
-    lcd.print("Qutipin 25mg 5PM");
-    lcd.setCursor(0,1);
-    lcd.print("Alzolam 0.5 10PM");
     if(digitalRead(IR3pin)==HIGH && pc3 != digitalRead(IR3pin)){
       c3++;
       pc3=1;
@@ -369,11 +354,6 @@ void loop() {
     digitalWrite(L3pin, HIGH);
   }
   if(t*tscale>=22*7200 && t*tscale<23*7200){
-    lcd.clear();
-    lcd.setCursor(0,0);
-    lcd.print("Alzolam 0.5 10PM");
-    lcd.setCursor(0,1);
-    lcd.print("Aciloc RD 20 8AM");
     if(digitalRead(IR3pin)==HIGH && pc3 != digitalRead(IR3pin)){
       c3++;
       pc3=1;
@@ -409,6 +389,37 @@ void loop() {
     }
   //Loop-hole fixing mechanism ends
   //4th medicine at 10 PM ends
+  //-----------First line of LCD------------//
+  lcd.setCursor(0,0);
+  lcd.print("");//Clearing screen without flickering
+  if(t*tscale>23*7200 && t*tscale<24*7200)
+    lcd.print("Aciloc RD 20 8AM");
+  if(t*tscale>0*7200 && t*tscale<=9*7200)
+    lcd.print("Aciloc RD 20 8AM");
+  if(t*tscale>9*7200 && t*tscale<=11*7200)
+    lcd.print("AMLOkind 5 10AM ");
+  if(t*tscale>11*7200 && t*tscale<=18*7200)
+    lcd.print("Qutipin 25mg 5PM");
+  if(t*tscale>18*7200 && t*tscale<=23*7200)
+    lcd.print("Alzolam 0.5 10PM");
+  //---------------------------------------//
+  //----------Second line of LCD-----------//
+  lcd.setCursor(0,1);
+  lcd.print("");
+  hr=t*tscale/7200;
+  if((t*tscale%120)==0)
+    mint=t*tscale/120-hr*60;
+  lcd.print("Time: ");
+  if(t*tscale<13*7200)
+    lcd.print(String(hr));
+  if(t*tscale>=13*7200)
+    lcd.print(String(hr-12));
+  lcd.print(":");
+  lcd.print(String(mint));
+  if(t*tscale<12*7200)
+    lcd.print("AM  ");
+  if(t*tscale>=12*7200)
+    lcd.print("PM  ");
   //-------------------Water Drinking-----------------------//
   if(digitalRead(DIR)==HIGH && wstate==0){
         wstate=1;
