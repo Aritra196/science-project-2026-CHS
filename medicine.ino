@@ -8,15 +8,15 @@ LiquidCrystal_I2C lcd(0x27, 16, 2);
 Servo s1;
 Servo s2;
 Servo s3;
-#define s1pin 23
-#define s2pin 1
-#define s3pin 3
+#define s1pin 12
+#define s2pin 14
+#define s3pin 27
 #define IR1pin 26
-#define IR2pin 25
+#define IR2pin 25 
 #define IR3pin 33
-#define L1pin 18
+#define L1pin 5
 #define L2pin 17
-#define L3pin 16
+#define L3pin 19
 #define mini 500
 #define maxi 2400
 char ssid[] = "Wokwi-GUEST";
@@ -24,32 +24,14 @@ char pass[] = "";
 
 //container variable
 int c1=0,c2=0,c3=0;
-int m1=0,m2=0,m3=0,m4=0;
+int m1=0,m2,m3=0,m4=0;
 int pc1=0,pc2=0,pc3=0;
 //time scale
 int simtime = 24*60;//Write the mins which represent 24 hrs
 
 int tscale = (24*3600)/simtime;//Scale of time
 int t=0;
-
-BLYNK_CONNECTED(){
-  Blynk.syncVirtual(V5);
-  Blynk.syncVirtual(V6);
-  Blynk.syncVirtual(V7);
-  Blynk.syncVirtual(V8);
-}
-BLYNK_WRITE(V5){
-  m1=param.asInt();
-}
-BLYNK_WRITE(V6){
-  m2=param.asInt();
-}
-BLYNK_WRITE(V7){
-  m3=param.asInt();
-}
-BLYNK_WRITE(V8){
-  m4=param.asInt();
-}
+int hr, mint;
 void setup() {
   Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
   lcd.init();
@@ -90,11 +72,6 @@ void loop() {
     digitalWrite(L1pin, HIGH);
   }
   if(t*tscale>=8*7200 && t*tscale<9*7200){
-    lcd.clear();
-    lcd.setCursor(0,0);
-    lcd.print("Aciloc RD 20 8AM");
-    lcd.setCursor(0,1);
-    lcd.print("AMLOkind 5 10AM");
     if(digitalRead(IR1pin)==HIGH && pc1 != digitalRead(IR1pin)){
       c1++;
       pc1=1;
@@ -139,11 +116,6 @@ void loop() {
     digitalWrite(L2pin, HIGH);
   }
   if(t*tscale>=10*7200 && t*tscale<11*7200){
-    lcd.clear();
-    lcd.setCursor(0,0);
-    lcd.print("AMLOkind 5 10AM");
-    lcd.setCursor(0,1);
-    lcd.print("Qutipin 25mg 5PM");
     if(digitalRead(IR2pin)==HIGH && pc2 != digitalRead(IR2pin)){
       c2++;
       pc2=1;
@@ -188,11 +160,6 @@ void loop() {
     digitalWrite(L3pin, HIGH);
   }
   if(t*tscale>=17*7200 && t*tscale<18*7200){
-    lcd.clear();
-    lcd.setCursor(0,0);
-    lcd.print("Qutipin 25mg 5PM");
-    lcd.setCursor(0,1);
-    lcd.print("Alzolam 0.5 10PM");
     if(digitalRead(IR3pin)==HIGH && pc3 != digitalRead(IR3pin)){
       c3++;
       pc3=1;
@@ -237,11 +204,6 @@ void loop() {
     digitalWrite(L3pin, HIGH);
   }
   if(t*tscale>=22*7200 && t*tscale<23*7200){
-    lcd.clear();
-    lcd.setCursor(0,0);
-    lcd.print("Alzolam 0.5 10PM");
-    lcd.setCursor(0,1);
-    lcd.print("Aciloc RD 20 8AM");
     if(digitalRead(IR3pin)==HIGH && pc3 != digitalRead(IR3pin)){
       c3++;
       pc3=1;
@@ -277,8 +239,38 @@ void loop() {
     }
   //Loop-hole fixing mechanism ends
   //4th medicine at 10 PM ends
-
-
+  //-----------First line of LCD------------//
+  lcd.setCursor(0,0);
+  lcd.print("");//Clearing screen without flickering
+  if(t*tscale>23*7200 && t*tscale<24*7200)
+    lcd.print("Aciloc RD 20 8AM");
+  if(t*tscale>0*7200 && t*tscale<=9*7200)
+    lcd.print("Aciloc RD 20 8AM");
+  if(t*tscale>9*7200 && t*tscale<=11*7200)
+    lcd.print("AMLOkind 5 10AM ");
+  if(t*tscale>11*7200 && t*tscale<=18*7200)
+    lcd.print("Qutipin 25mg 5PM");
+  if(t*tscale>18*7200 && t*tscale<=23*7200)
+    lcd.print("Alzolam 0.5 10PM");
+  //---------------------------------------//
+  //----------Second line of LCD-----------//
+  lcd.setCursor(0,1);
+  lcd.print("");
+  hr=t*tscale/7200;
+  if((t*tscale%120)==0)
+    mint=t*tscale/120-hr*60;
+  lcd.print("Time: ");
+  if(t*tscale<13*7200)
+    lcd.print(String(hr));
+  if(t*tscale>=13*7200)
+    lcd.print(String(hr-12));
+  lcd.print(":");
+  lcd.print(String(mint));
+  if(t*tscale<12*7200)
+    lcd.print("AM  ");
+  if(t*tscale>=12*7200)
+    lcd.print("PM  ");
+  //---------------------------------------//
   Blynk.run();
   //--------------Time clock-----------//
   t++;
@@ -287,5 +279,4 @@ void loop() {
     t=0;
   }
   delay(500);
-  lcd.clear();
 }
