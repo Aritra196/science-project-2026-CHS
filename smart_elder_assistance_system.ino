@@ -56,6 +56,12 @@ BLYNK_CONNECTED(){
   Blynk.syncVirtual(V7);
   Blynk.syncVirtual(V8);
 }
+//---------Set exact simulation time-----------//
+BLYNK_WRITE(V15){
+  int tinput = param.asInt();
+  t=tinput*2;
+}
+//---------------------------------------------//
 BLYNK_WRITE(V1){
   int hstate = param.asInt();
   if(hstate<2){
