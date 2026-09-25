@@ -1,6 +1,6 @@
-#define BLYNK_TEMPLATE_ID "TMPL37trpYsQK"
-#define BLYNK_TEMPLATE_NAME "Science project 2026"
-#define BLYNK_AUTH_TOKEN "YEsgcapcOlKuTPionK3RGVVPF8k0wQ29"
+#define BLYNK_TEMPLATE_ID "Your_blynk_template_ID"
+#define BLYNK_TEMPLATE_NAME "Your Template Name"
+#define BLYNK_AUTH_TOKEN "Yourblynkauthtoken"
 #include <BlynkSimpleEsp32.h>
 #include <LiquidCrystal_I2C.h>
 #include <ESP32Servo.h>
