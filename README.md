@@ -56,7 +56,7 @@
 
 ## Images of the model:- 
 
-  
+![image](https://github.com/Aritra196/science-project-2026-CHS/blob/main/IMG_20260227_181222.jpg)
 
 ## Approximate Cost in REAL LIFE(Only Electronics):- 
 1. ESP32-DevKitC V4 x 1 + ESP32-S3-DevKitC-N16R8 x 1 = ₹1227
