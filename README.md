@@ -1,12 +1,8 @@
 # Smart Elder Assistance System
 
-###### Also known as *Project Smart Warranty Expired Club*
-
 ## Members:-
 - Arghamegh Das
 - Aritra Mondal 
-
-## "#ESP8266 is not suitable for IoT based medium-level school projects"
 
 ## Features:-
 
