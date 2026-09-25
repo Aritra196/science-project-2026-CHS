@@ -54,6 +54,9 @@
 
 <img width="1600" height="1091" alt="ESP32-wroom - modified" src="https://github.com/user-attachments/assets/efdbf069-636a-4af2-82e7-de87767f18be" />
 
+## Images of the model:- 
+
+  
 
 ## Approximate Cost in REAL LIFE(Only Electronics):- 
 1. ESP32-DevKitC V4 x 1 + ESP32-S3-DevKitC-N16R8 x 1 = ₹1227
